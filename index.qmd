@@ -1,6 +1,5 @@
 ---
-title: "PolyomicsOrganisation"
-author: "Graham Hamilton"
+title: "Polyomics Organisation"
 ---
 
 ### Service
