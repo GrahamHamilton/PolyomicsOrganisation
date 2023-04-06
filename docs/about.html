@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Graham Hamilton">
 
-<title>PolyomicsOrganisation</title>
+<title>PolyomicsOrganisation - About</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -59,9 +58,6 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit"
   }
 }</script>
-<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
-<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
-<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="styles.css">
@@ -84,11 +80,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page">
+    <a class="nav-link" href="./index.html">
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html">
+    <a class="nav-link active" href="./about.html" aria-current="page">
  <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -102,34 +98,20 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#service" id="toc-service" class="nav-link active" data-scroll-target="#service">Service</a></li>
-  <li><a href="#training" id="toc-training" class="nav-link" data-scroll-target="#training">Training</a></li>
-  <li><a href="#initial-thoughts-on-training" id="toc-initial-thoughts-on-training" class="nav-link" data-scroll-target="#initial-thoughts-on-training">Initial thoughts on training:</a></li>
-  </ul>
-</nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">PolyomicsOrganisation</h1>
+<h1 class="title">About</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Graham Hamilton </p>
-          </div>
-  </div>
     
   
     
@@ -138,160 +120,9 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="service" class="level3">
-<h3 class="anchored" data-anchor-id="service">Service</h3>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<p>
-</p><pre class="mermaid mermaid-js" data-tooltip-selector="#mermaid-tooltip-1">flowchart LR
-
-  h_bio(Head of&lt;br&gt;Bioinformatics)---info_serv(Informaticians)
-  subgraph bio[Service]
-  info_serv---ngs_serv(NGS)
-  info_serv---prot_serv(Proteomics)
-  info_serv---met_serv(Metabolomics)
-  end
-  
-  h_data_sci(Head of Biological&lt;br&gt;Data Science)---data_sci_serv(Data&lt;br&gt;Scientists)
-  subgraph data_sci[Data Science]
-  data_sci_serv---stat_serv(Statistical&lt;br&gt;Ananlysis)
-  data_sci_serv---ml_serv(Machine Learning/&lt;br&gt;Artificial Inteligence)
-  end
-
-%% Styles %%
-classDef SUB fill:#eeeeee,stroke:#333,stroke-width:4px;
-class bio,data_sci,train SUB;
-
-classDef HEAD color:#ffffff,fill:#003865,stroke:#bbbbbb,stroke-width:4px;
-class h_bio,h_data_sci,h_train HEAD;
-
-%% classDef LEAD color:#ffffff,fill:#385A4F,stroke:#bbbbbb,stroke-width:4px; %%
-%% class id2,id21 LEAD; %%
-
-classDef INFO color:#ffffff,fill:#FFE300,stroke:#bbbbbb,stroke-width:4px;
-class info_serv,info_train INFO;
-
-classDef NGS color:#ffffff,fill:#52473B,stroke:#bbbbbb,stroke-width:4px;
-class ngs_serv,ngs_train NGS;
-
-classDef PROT color:#ffffff,fill:#005398,stroke:#bbbbbb,stroke-width:4px;
-class prot_serv,prot_train PROT;
-
-classDef MET color:#ffffff,fill:#AA8066,stroke:#bbbbbb,stroke-width:4px;
-class met_serv,met_train MET;
-
-classDef DATASCI color:#ffffff,fill:#FF8C00,stroke:#bbbbbb,stroke-width:4px;
-class data_sci_serv,data_sci_train DATASCI;
-
-classDef ML color:#ffffff,fill:#9A3A06,stroke:#bbbbbb,stroke-width:4px;
-class ml_serv,ml_train ML;
-
-classDef PYTHON color:#ffffff,fill:#B30C00,stroke:#bbbbbb,stroke-width:4px;
-class py_train PYTHON;
-
-classDef R color:#ffffff,fill:#B06C96,stroke:#bbbbbb,stroke-width:4px;
-class r_train R;
-
-classDef STATS color:#ffffff,fill:#951272,stroke:#bbbbbb,stroke-width:4px;
-class stat_serv,stat_train STATS;
-
-</pre>
-<div id="mermaid-tooltip-1" class="mermaidTooltip">
-
-</div>
-<p></p>
-</div>
-</div>
-</div>
-<p><strong>Proposed Structure for Informatics Organisation</strong></p>
-</section>
-<section id="training" class="level3">
-<h3 class="anchored" data-anchor-id="training">Training</h3>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<p>
-</p><pre class="mermaid mermaid-js" data-tooltip-selector="#mermaid-tooltip-2">flowchart LR
-  h_train(Head of Training)---data_sci_train(Data&lt;br&gt;Scientists)
-  h_train---info_train(Informaticians)
-  h_train---biol_train(Biologists)
-  
-  subgraph train_info[Informatics Training]
-  data_sci_train---stat_train(Statistical&lt;br&gt;Ananlysis)
-  data_sci_train---ml_train(Machine Learning/&lt;br&gt;Artificial Inteligence)
-  data_sci_train---py_train(Python)
-  data_sci_train---r_train(R)
-  info_train---ngs_train(NGS)
-  info_train---prot_train(Proteomics)
-  info_train---met_train(Metabolomics)
-  end
-  
-  subgraph train_wet_lab[Wet Lab Training]
-  biol_train---ngs_lab(NGS&lt;br&gt;Sample/Library&lt;br&gt;Preperation)
-  biol_train---prot_lab(Proteomics&lt;br&gt;Sample&lt;br&gt;Preperation)
-  biol_train---met_lab(Metabolomics&lt;br&gt;Sample&lt;br&gt;Preperation)
-  end
-  
-  %% Styles %%
-classDef SUB fill:#eeeeee,stroke:#333,stroke-width:4px;
-class bio,data_sci,train_info,train_wet_lab SUB;
-
-classDef HEAD color:#ffffff,fill:#003865,stroke:#bbbbbb,stroke-width:4px;
-class h_train HEAD;
-
-classDef INFO color:#ffffff,fill:#FFE300,stroke:#bbbbbb,stroke-width:4px;
-class info_train INFO;
-
-classDef BIOL color:#ffffff,fill:#006630,stroke:#bbbbbb,stroke-width:4px;
-class biol_train BIOL;
-
-classDef DATASCI color:#ffffff,fill:#FF8C00,stroke:#bbbbbb,stroke-width:4px;
-class data_sci_train DATASCI;
-
-classDef NGS color:#ffffff,fill:#52473B,stroke:#bbbbbb,stroke-width:4px;
-class ngs_train,ngs_lab NGS;
-
-classDef PROT color:#ffffff,fill:#005398,stroke:#bbbbbb,stroke-width:4px;
-class prot_train,prot_lab PROT;
-
-classDef MET color:#ffffff,fill:#AA8066,stroke:#bbbbbb,stroke-width:4px;
-class met_train,met_lab MET;
-
-classDef ML color:#ffffff,fill:#9A3A06,stroke:#bbbbbb,stroke-width:4px;
-class ml_train ML;
-
-classDef PYTHON color:#ffffff,fill:#B30C00,stroke:#bbbbbb,stroke-width:4px;
-class py_train PYTHON;
-
-classDef R color:#ffffff,fill:#B06C96,stroke:#bbbbbb,stroke-width:4px;
-class r_train R;
-
-classDef STATS color:#ffffff,fill:#951272,stroke:#bbbbbb,stroke-width:4px;
-class stat_train STATS;
-</pre>
-<div id="mermaid-tooltip-2" class="mermaidTooltip">
-
-</div>
-<p></p>
-</div>
-</div>
-</div>
-<p><strong>Proposed structure for Training Organistion</strong>. <em>Needs some work! Especially the wet lab training</em></p>
-</section>
-<section id="initial-thoughts-on-training" class="level3">
-<h3 class="anchored" data-anchor-id="initial-thoughts-on-training">Initial thoughts on training:</h3>
-<ul>
-<li>Head of Bioinformatics could also be Head of Training</li>
-<li>Head of Biological Data Science could also be Head of Training</li>
-<li>Training, as indicated in the diagram, would be conducted by members of Polyomics (new name of service) staff
-<ul>
-<li>Could have <em>guest</em> trainers if required</li>
-</ul></li>
-</ul>
+<p>Probably not going to use this page.</p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
