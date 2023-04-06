@@ -1,5 +1,5 @@
 ---
-title: "PolyomicsOrganisation"
+title: "Polyomics Organisation"
 author: "Graham Hamilton"
 ---
 

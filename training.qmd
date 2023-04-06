@@ -1,0 +1,79 @@
+---
+title: "Training"
+---
+
+### Programming
+
+#### R
+
+To be developed, possibly based on John Coles course, which I believe is transcriptomics analysis in R. Could also be a general R course or expanded to include Metabolomics etc.
+
+#### Python
+
+Based on the course Ronan developed for the Bioinformatics MSc. course.
+
+### NGS
+
+#### Galaxy
+
+##### Introductory Course
+
+David regularly runs this course.
+
+##### Advanced Course
+
+David has an advanced course, not run regularly.
+
+### Metagenomics
+
+David has a course already, one week long on line.
+
+### Transcriptomics
+
+##### Introductory Course - Bulk
+
+Transcriptomics introductory course could be covered in the Galaxy training course:-
+
+-   Quality control
+-   Read trimming
+-   Alignment
+-   Differential expression
+
+##### Advanced Course - Bulk
+
+In depth course using DESeq2, including:-
+
+-   Why use DESeq2
+-   Normalistion
+-   Experimental design
+    -   Batch correction
+    -   Multifactorial and factor interactions
+    -   Time course
+-   Results visualisation
+-   Gene Ontology enrichment
+-   Pathway analysis
+
+::: callout-warning
+This module is a work in progress. Complete up to the `Results visualisation` section
+:::
+
+##### Single Cell
+
+::: callout-note
+Need to develop course probably using Seurat package
+:::
+
+##### Spatial Transcriptomics
+
+::: callout-note
+Need to develop course probably using Seurat or Giotto package
+:::
+
+### Proteomics
+
+Richard Burchmore may already run a course on Proteomics analysis.
+
+### Metabolomics
+
+Gavin has a course on Metabolomics that he has done before using the PMP server. He does one to one training at the present. Not sure if there are beginner and advanced levels to the course.
+
