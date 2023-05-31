@@ -109,7 +109,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#service" id="toc-service" class="nav-link active" data-scroll-target="#service">Service</a></li>
+  <li><a href="#organisation" id="toc-organisation" class="nav-link active" data-scroll-target="#organisation">Organisation</a></li>
   <li><a href="#training" id="toc-training" class="nav-link" data-scroll-target="#training">Training</a></li>
   <li><a href="#initial-thoughts-on-training" id="toc-initial-thoughts-on-training" class="nav-link" data-scroll-target="#initial-thoughts-on-training">Initial thoughts on training:</a></li>
   </ul>
@@ -135,25 +135,106 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="service" class="level3">
-<h3 class="anchored" data-anchor-id="service">Service</h3>
+<section id="organisation" class="level3">
+<h3 class="anchored" data-anchor-id="organisation">Organisation</h3>
+<p><strong>Current Structure for Polyomics</strong></p>
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <p>
 </p><pre class="mermaid mermaid-js" data-tooltip-selector="#mermaid-tooltip-1">flowchart LR
-
-  h_bio(Head of&lt;br&gt;Bioinformatics)---info_serv(Informaticians)
-  subgraph bio[Service]
-  info_serv---ngs_serv(NGS)
-  info_serv---prot_serv(Proteomics)
-  info_serv---met_serv(Metabolomics)
+  pol_dir(Polyomics&lt;br&gt;Director)---h_seq(Head of&lt;br&gt;NGS)
+  pol_dir---h_met(Head of&lt;br&gt;Metabolomics)
+  pol_dir---h_prot(Head of&lt;br&gt;Proteomics)
+  pol_dir---h_data_sci(Head of Biological&lt;br&gt;Data Science)
+  
+  subgraph ngs[NGS]
+  h_seq---ngs_info(NGS&lt;br&gt;Informaticians)
+  h_seq---ngs_lab(NGS&lt;br&gt;Sample/Library&lt;br&gt;Preperation)
   end
   
-  h_data_sci(Head of Biological&lt;br&gt;Data Science)---data_sci_serv(Data&lt;br&gt;Scientists)
+  subgraph met[Metabolomics]
+  h_met-.-met_info(Metabolomics&lt;br&gt;Informaticians)
+  h_met-.-met_lab(Metabolomics&lt;br&gt;Sample&lt;br&gt;Preperation)
+  end
+  
+  subgraph prot[Proteomics]
+  h_prot-.-prot_info(Proteomics&lt;br&gt;Informaticians)
+  h_prot-.-prot_lab(Proteomics&lt;br&gt;Sample&lt;br&gt;Preperation)
+  end
+  
   subgraph data_sci[Data Science]
-  data_sci_serv---stat_serv(Statistical&lt;br&gt;Ananlysis)
-  data_sci_serv---ml_serv(Machine Learning/&lt;br&gt;Artificial Inteligence)
+  h_data_sci---data_sci_info(Biological&lt;br&gt;Data&lt;br&gt;Scientists)
+  end
+  
+  %% Styles %%
+classDef SUB fill:#eeeeee,stroke:#333,stroke-width:4px;
+class ngs,data_sci,prot,met SUB;
+
+classDef DIRECTOR color:#ffffff,fill:#385A4F,stroke:#bbbbbb,stroke-width:4px;
+class pol_dir DIRECTOR;
+
+%% classDef HEAD color:#ffffff,fill:#003865,stroke:#bbbbbb,stroke-width:4px; %%
+%% class h_seq,h_data_sci,h_met,h_prot HEAD; %%
+
+classDef DATASCI color:#ffffff,fill:#951272,stroke:#bbbbbb,stroke-width:4px;
+class h_data_sci DATASCI;
+
+classDef NGS color:#ffffff,fill:#52473B,stroke:#bbbbbb,stroke-width:4px;
+class h_seq NGS;
+
+classDef PROT color:#ffffff,fill:#005398,stroke:#bbbbbb,stroke-width:4px;
+class h_prot PROT;
+
+classDef MET color:#ffffff,fill:#AA8066,stroke:#bbbbbb,stroke-width:4px;
+class h_met MET;
+
+classDef DATAINFO color:#ffffff,fill:#FF8C00,stroke:#bbbbbb,stroke-width:4px;
+class data_sci_info DATAINFO;
+
+classDef LAB color:#ffffff,fill:#B30C00,stroke:#bbbbbb,stroke-width:4px;
+class met_lab,prot_lab,ngs_lab LAB
+
+classDef INFO color:#ffffff,fill:#7D2239,stroke:#bbbbbb,stroke-width:4px;
+class met_info,prot_info,ngs_info INFO
+
+classDef ML color:#ffffff,fill:#9A3A06,stroke:#bbbbbb,stroke-width:4px;
+class ml_info,ml_train ML;
+
+classDef PYTHON color:#ffffff,fill:#B30C00,stroke:#bbbbbb,stroke-width:4px;
+class py_train PYTHON;
+
+classDef R color:#ffffff,fill:#B06C96,stroke:#bbbbbb,stroke-width:4px;
+class r_train R;
+
+classDef STATS color:#ffffff,fill:#951272,stroke:#bbbbbb,stroke-width:4px;
+class stat_info,stat_train STATS;
+</pre>
+<div id="mermaid-tooltip-1" class="mermaidTooltip">
+
+</div>
+<p></p>
+</div>
+</div>
+</div>
+<p><strong>Proposed Structure for Informatics Organisation</strong></p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<p>
+</p><pre class="mermaid mermaid-js" data-tooltip-selector="#mermaid-tooltip-2">flowchart LR
+
+  h_bio(Head of&lt;br&gt;Bioinformatics)---info_info(Informaticians)
+  subgraph bio[Service]
+  info_info---ngs_info(NGS)
+  info_info---prot_info(Proteomics)
+  info_info---met_info(Metabolomics)
+  end
+  
+  h_data_sci(Head of Biological&lt;br&gt;Data Science)---data_sci_info(Data&lt;br&gt;Scientists)
+  subgraph data_sci[Data Science]
+  data_sci_info---stat_info(Statistical&lt;br&gt;Ananlysis)
+  data_sci_info---ml_info(Machine Learning/&lt;br&gt;Artificial Inteligence)
   end
 
 %% Styles %%
@@ -167,22 +248,22 @@ class h_bio,h_data_sci,h_train HEAD;
 %% class id2,id21 LEAD; %%
 
 classDef INFO color:#ffffff,fill:#FFE300,stroke:#bbbbbb,stroke-width:4px;
-class info_serv,info_train INFO;
+class info_info,info_train INFO;
 
 classDef NGS color:#ffffff,fill:#52473B,stroke:#bbbbbb,stroke-width:4px;
-class ngs_serv,ngs_train NGS;
+class ngs_info,ngs_train NGS;
 
 classDef PROT color:#ffffff,fill:#005398,stroke:#bbbbbb,stroke-width:4px;
-class prot_serv,prot_train PROT;
+class prot_info,prot_train PROT;
 
 classDef MET color:#ffffff,fill:#AA8066,stroke:#bbbbbb,stroke-width:4px;
-class met_serv,met_train MET;
+class met_info,met_train MET;
 
 classDef DATASCI color:#ffffff,fill:#FF8C00,stroke:#bbbbbb,stroke-width:4px;
-class data_sci_serv,data_sci_train DATASCI;
+class data_sci_info,data_sci_train DATASCI;
 
 classDef ML color:#ffffff,fill:#9A3A06,stroke:#bbbbbb,stroke-width:4px;
-class ml_serv,ml_train ML;
+class ml_info,ml_train ML;
 
 classDef PYTHON color:#ffffff,fill:#B30C00,stroke:#bbbbbb,stroke-width:4px;
 class py_train PYTHON;
@@ -191,17 +272,16 @@ classDef R color:#ffffff,fill:#B06C96,stroke:#bbbbbb,stroke-width:4px;
 class r_train R;
 
 classDef STATS color:#ffffff,fill:#951272,stroke:#bbbbbb,stroke-width:4px;
-class stat_serv,stat_train STATS;
+class stat_info,stat_train STATS;
 
 </pre>
-<div id="mermaid-tooltip-1" class="mermaidTooltip">
+<div id="mermaid-tooltip-2" class="mermaidTooltip">
 
 </div>
 <p></p>
 </div>
 </div>
 </div>
-<p><strong>Proposed Structure for Informatics Organisation</strong></p>
 </section>
 <section id="training" class="level3">
 <h3 class="anchored" data-anchor-id="training">Training</h3>
@@ -209,7 +289,7 @@ class stat_serv,stat_train STATS;
 <div class="cell-output-display">
 <div>
 <p>
-</p><pre class="mermaid mermaid-js" data-tooltip-selector="#mermaid-tooltip-2">flowchart LR
+</p><pre class="mermaid mermaid-js" data-tooltip-selector="#mermaid-tooltip-3">flowchart LR
   h_train(Head of Training)---data_sci_train(Data&lt;br&gt;Scientists)
   h_train---info_train(Informaticians)
   h_train---biol_train(Biologists)
@@ -267,7 +347,7 @@ class r_train R;
 classDef STATS color:#ffffff,fill:#951272,stroke:#bbbbbb,stroke-width:4px;
 class stat_train STATS;
 </pre>
-<div id="mermaid-tooltip-2" class="mermaidTooltip">
+<div id="mermaid-tooltip-3" class="mermaidTooltip">
 
 </div>
 <p></p>
